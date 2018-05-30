@@ -1,3 +1,7 @@
 <h1>Welcome, <%= @user.username %> </h1>
 
-YOU ARE IN THE TWEETS FOLDERRRRR
+<% Tweet.all.each do |tweet| %>
+<h2> tweet.user.username</h2>
+<h3> <%= tweet.content %></h3>
+<br><br>
+<% end %>
